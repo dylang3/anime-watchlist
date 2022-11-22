@@ -1,10 +1,4 @@
-# Anime Watchlist
-
-## Contents
-[Overview](#overview)  
-[Features](#features)  
-     -- [In Development](#in-development)  
-     -- [Feature Wishlist](#feature-wishlist)  
+# Anime Watchlist 
 
 ## Overview
 
