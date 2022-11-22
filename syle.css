@@ -3,8 +3,12 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: rgb(247, 243, 243); 
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .anime-image {
@@ -49,6 +53,14 @@ body {
     cursor: pointer;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+    padding-left: 1rem;
+}
+
 .sub-heading {
     display: block;
     color: rgba(0, 0, 0, 0.432);
@@ -58,10 +70,19 @@ body {
     display: block;
 }
 
+.planning-container {
+    display: block;
+}
+
+.completed-container {
+    display: block;
+}
+
 .card {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 50vw;
     background-color: #fff;
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
