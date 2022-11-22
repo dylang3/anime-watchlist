@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(247, 243, 243); 
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.anime-image {
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px rgb(175, 175, 175);
+}
+
+.title {
+    display: block;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.search input {
+    width: 300px;
+    line-height: 2rem;
+    padding: 5px 10px 5px 15px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 10px 5px 5px rgb(175, 175, 175);
+}
+
+.search button {
+    padding: 5px 15px 5px 15px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(221, 21, 221);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 10px 5px 5px rgb(175, 175, 175);
+}
+
+.search button:hover {
+    background-color: rgb(185, 18, 185);
+    cursor: pointer;
+}
+
+.sub-heading {
+    display: block;
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.inprogress-container {
+    display: block;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(175, 175, 175);
+}
+
+.btn-card {
+    color: #fff;
+    background-color: rgb(221, 21, 221);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 3px 2px 3px rgb(175, 175, 175);
+}
+
+.btn-card:hover {
+    background-color: rgb(185, 18, 185);
+    cursor: pointer;
+}
