@@ -7,7 +7,7 @@ body {
     flex-direction: column;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 60em) {
     body {
         margin-left: 20vw;
         margin-right: 20vw;
