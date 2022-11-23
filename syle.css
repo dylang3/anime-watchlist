@@ -1,26 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+* {
+    touch-action: manipulation;
+  }
+
 body {
     font-family: 'Poppins', sans-serif;
     background: rgb(247, 243, 243); 
     display: flex;
     flex-direction: column;
-}
-
-@media (min-width: 60em) {
-    body {
-        margin-left: 20vw;
-        margin-right: 20vw;
-    }
-
-    .card {
-        max-width: 1000px;
-    }
-
-    .main {
-        margin: 0 auto;
-        width: 40vw;
-    }
 }
 
 .anime-image {
@@ -118,10 +106,37 @@ body {
     padding: 5px 10px 5px 10px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
     box-shadow: 3px 2px 3px rgb(175, 175, 175);
 }
 
-.btn-card:hover {
-    background-color: rgb(185, 18, 185);
-    cursor: pointer;
+/* This styling applies only to devices that can hover (e.g. using a mouse) */
+@media (hover: hover) {
+
+    .btn-card:hover {
+        background-color: rgb(185, 18, 185);
+        cursor: pointer;
+    }
+}
+
+
+/* This styling applies only when screen size is >= 60em */
+@media (min-width: 60em) {
+    body {
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .card {
+        max-width: 1000px;
+    }
+
+    .main {
+        margin: 0 auto;
+        width: 40vw;
+    }
+
+    .btn-card {
+        font-size: 1rem;
+    }
 }

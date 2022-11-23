@@ -22,7 +22,7 @@
             <div class="sub-heading">
                 <h2>In Progress</h2>
             </div>
-            <article class="card">
+            <article class="card" draggable="true">
                 <div class="card-left">
                     <picture>
                         <img  class="anime-image" src="eightysix.jpg">
@@ -30,9 +30,9 @@
                     <p>Eighty-Six (86)</p>
                 </div>
                 <div class="card-right">
-                    <button class="btn-card">-</button>
-                    <p>11 / 11</p>
-                    <button class="btn-card">+</button>
+                    <button class="btn-card" onclick="decrease()">-</button>
+                    <p id="episodes-eightysix"></p>
+                    <button class="btn-card" onclick="increase()">+</button>
                 </div>
             </article>
         </div>
@@ -47,6 +47,6 @@
             </div>
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
