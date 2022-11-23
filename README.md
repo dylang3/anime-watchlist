@@ -16,6 +16,5 @@ This is what I would argue is my first "real" web application that I am developi
 
 ### Feature Wishlist
 * Add section for animes On Hold
-* <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API" target="_blank"> HTML Drag and Drop API</a>
 * Add drag-and-drop functionality using the [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 * Add dropdown to select tier rating (e.g. S-tier, C-tier, etc.) -- this could be used to generate a tier-list using the anime name and image which would be pretty cool!
