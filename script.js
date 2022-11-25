@@ -8,27 +8,47 @@ let totalEpisodes = 11
 document.getElementById('episodes-eightysix').innerText = `0 / ${totalEpisodes}`
 
 function decrease() {
-    // prevents negative values
-    if (episodesWatched >= 1) {
-        episodesWatched--
-    } else {
-        return
-    }
-    
-    document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
+    switch (true) {
+        case (episodesWatched === totalEpisodes):
+            episodesWatched--
+            document.getElementById('plus').style.visibility = "visible"
+            document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
+            break
 
-    console.log("User decreased episodes watched.")
+        case (episodesWatched === 1):
+            episodesWatched--
+            document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
+            document.getElementById('minus').style.visibility = "hidden"
+            break
+
+        case (episodesWatched > 0):
+            episodesWatched--
+            document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
+            break
+
+        default: return
+    }
 }
 
 function increase() {
-    // prevents values above the total number of episodes 
-    if (episodesWatched < totalEpisodes) {
-        episodesWatched++
-    } else {
-        return
+    switch (true) {
+        case (episodesWatched === totalEpisodes - 1):
+            episodesWatched++
+            document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
+            document.getElementById('plus').style.visibility = "hidden"
+            break
+
+        case (episodesWatched === 0):
+            document.getElementById('minus').style.visibility = "visible"
+            episodesWatched++
+            document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
+            break
+        
+        case (episodesWatched < totalEpisodes):
+            episodesWatched++
+            document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
+            break
+
+        default: return
     }
-
-    document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
-
-    console.log("User increased episodes watched.")
 }

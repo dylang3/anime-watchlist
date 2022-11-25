@@ -110,6 +110,10 @@ body {
     box-shadow: 3px 2px 3px rgb(175, 175, 175);
 }
 
+#minus {
+    visibility: hidden;
+}
+
 /* This styling applies only to devices that can hover (e.g. using a mouse) */
 @media (hover: hover) {
 
