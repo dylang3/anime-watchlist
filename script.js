@@ -51,13 +51,13 @@ function decrease() {
 
 function increase() {
     switch (true) {
-        case (episodesWatched == totalEpisodes - 1):
+        case (episodesWatched === totalEpisodes - 1):
             episodesWatched++
             document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
             document.getElementById('plus').style.visibility = "hidden"
             break
 
-        case (episodesWatched === 0):
+        case (episodesWatched >= 0):
             document.getElementById('minus').style.visibility = "visible"
             episodesWatched++
             document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
