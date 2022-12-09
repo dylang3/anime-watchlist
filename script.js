@@ -1,10 +1,12 @@
 // This code will need to be updated to pull anime data in from the API
 // What I have so far is what will be the basic functionality for each anime card
 
-let episodesWatched
+let episodesWatched = 0
 let totalEpisodes = 11
 
-episodesWatched = localStorage.getItem('episodesWatched')
+if (localStorage.getItem('episodesWatched') !== null) {
+    episodesWatched = localStorage.getItem('episodesWatched')
+}
 
 // initialize episode text
 document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
