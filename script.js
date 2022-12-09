@@ -1,21 +1,36 @@
 // This code will need to be updated to pull anime data in from the API
 // What I have so far is what will be the basic functionality for each anime card
 
-let episodesWatched = 0
+let episodesWatched
 let totalEpisodes = 11
 
-// initialize the innerText to have 0 / totalEpisodes
-document.getElementById('episodes-eightysix').innerText = `0 / ${totalEpisodes}`
+episodesWatched = localStorage.getItem('episodesWatched')
+
+// initialize episode text
+document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
+
+// initialize button visibility
+if (episodesWatched == totalEpisodes) {
+    document.getElementById('plus').style.visibility = "hidden"
+} else if (episodesWatched < totalEpisodes) {
+    document.getElementById('plus').style.visibility = "visible"
+}
+
+if (episodesWatched > 0) {
+    document.getElementById('minus').style.visibility = "visible"
+} else if (episodesWatched === 0) {
+    document.getElementById('minus').style.visibility = "hidden"
+}
 
 function decrease() {
     switch (true) {
-        case (episodesWatched === totalEpisodes):
+        case (episodesWatched == totalEpisodes):
             episodesWatched--
             document.getElementById('plus').style.visibility = "visible"
             document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
             break
 
-        case (episodesWatched === 1):
+        case (episodesWatched == 1):
             episodesWatched--
             document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
             document.getElementById('minus').style.visibility = "hidden"
@@ -28,17 +43,19 @@ function decrease() {
 
         default: return
     }
+
+    localStorage.setItem('episodesWatched', episodesWatched)
 }
 
 function increase() {
     switch (true) {
-        case (episodesWatched === totalEpisodes - 1):
+        case (episodesWatched == totalEpisodes - 1):
             episodesWatched++
             document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
             document.getElementById('plus').style.visibility = "hidden"
             break
 
-        case (episodesWatched === 0):
+        case (episodesWatched > 0):
             document.getElementById('minus').style.visibility = "visible"
             episodesWatched++
             document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
@@ -51,4 +68,7 @@ function increase() {
 
         default: return
     }
+
+    localStorage.setItem('episodesWatched', episodesWatched)
 }
+
