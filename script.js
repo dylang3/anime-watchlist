@@ -57,7 +57,7 @@ function increase() {
             document.getElementById('plus').style.visibility = "hidden"
             break
 
-        case (episodesWatched > 0):
+        case (episodesWatched === 0):
             document.getElementById('minus').style.visibility = "visible"
             episodesWatched++
             document.getElementById('episodes-eightysix').innerText = `${episodesWatched} / ${totalEpisodes}`
