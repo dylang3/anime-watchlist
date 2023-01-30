@@ -4,7 +4,7 @@
 let episodesWatched = 0
 let totalEpisodes = 11
 
-if (localStorage.getItem('episodesWatched') !== null) {
+if (localStorage.getItem('episodesWatched')) {
     episodesWatched = localStorage.getItem('episodesWatched')
 }
 
