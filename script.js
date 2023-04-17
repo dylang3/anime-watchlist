@@ -114,3 +114,8 @@ fetch('https://api.myanimelist.net/v2/anime/41457?fields=title', {
 })
     .then((res) => res.json())
     .then((data) => console.log(data))
+
+// If I want to fetch API data client-side, MAL won't work. I either need to access the MAL API server-side or use the jikan api.
+fetch('https://api.jikan.moe/v4/anime?q=86')
+    .then((res) => res.json())
+    .then((data) => console.log(data))
