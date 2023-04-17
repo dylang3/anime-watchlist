@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="syle.css">
-    <title>Anime Watchlist</title>
-</head>
-<body>
-    <div class="title">
-        <h1>My Anime Watchlist</h1>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="syle.css" />
+        <title>Anime Watchlist</title>
+    </head>
+    <body>
+        <div class="title">
+            <h1>My Anime Watchlist</h1>
+        </div>
 
-    <div class="search">
-        <input type="text" placeholder="Search for an anime...">
-        <button>SEARCH</button>
-    </div>
+        <div class="search">
+            <input id="search-input" type="text" placeholder="Search for an anime..." />
+            <button id="search-btn">SEARCH</button>
+        </div>
 
-    <div class="main">
-        <div class="inprogress-container">
-            <div class="sub-heading">
-                <h2>In Progress</h2>
-            </div>
-            <article class="card" draggable="true">
-                <div class="card-left">
-                    <picture>
-                        <img  class="anime-image" src="eightysix.jpg">
-                    </picture>
-                    <p>Eighty-Six (86)</p>
+        <div class="main">
+            <div class="inprogress-container">
+                <div class="sub-heading">
+                    <h2>In Progress</h2>
                 </div>
-                <div class="card-right">
-                    <button class="btn-card" id="minus" onclick="decrease()">-</button>
-                    <p id="episodes-eightysix"></p>
-                    <button class="btn-card" id="plus" onclick="increase()">+</button>
+                <article class="card" draggable="true">
+                    <div class="card-left">
+                        <picture>
+                            <img class="anime-image" src="eightysix.jpg" />
+                        </picture>
+                        <p>Eighty-Six (86)</p>
+                    </div>
+                    <div class="card-right">
+                        <button class="btn-card" id="minus" onclick="decrease()">-</button>
+                        <p id="episodes-eightysix"></p>
+                        <button class="btn-card" id="plus" onclick="increase()">+</button>
+                    </div>
+                </article>
+            </div>
+            <div class="planning-container">
+                <div class="sub-heading">
+                    <h2>Planning to Watch</h2>
                 </div>
-            </article>
-        </div>
-        <div class="planning-container">
-            <div class="sub-heading">
-                <h2>Planning to Watch</h2>
+            </div>
+            <div class="completed-container">
+                <div class="sub-heading">
+                    <h2>Completed</h2>
+                </div>
             </div>
         </div>
-        <div class="completed-container">
-            <div class="sub-heading">
-                <h2>Completed</h2>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
