@@ -93,7 +93,7 @@ function increase() {
 
 // MAL API
 async function searchAnime(query) {
-    const response = await fetch(`https://api.myanimelist.net/v2/anime/q=${query}?fields=title`, {
+    const response = await fetch(`https://api.myanimelist.net/v2/anime?q=${query}?`, {
         headers: {
             'X-MAL-CLIENT-ID': '361013d5116f39ff6dcaac63e96d40b7',
         },
